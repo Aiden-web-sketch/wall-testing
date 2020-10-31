@@ -1,9 +1,7 @@
 var wall,thickness;
 var bullet,weight,speed;
 
-thickness=random(22,83)
 
-weight=random(30,52)
 
 
 
@@ -14,6 +12,10 @@ function setup() {
   createCanvas(1600,400);
   bullet=createSprite(200, 200,weight);
 wall=createSprite(1200,200,thickness,height/1)
+    speed=random(223,321)
+  bullet.velocityX=speed;
+  thickness=random(22,83)
+weight=random(30,52)
 }
 
   
@@ -22,8 +24,7 @@ wall=createSprite(1200,200,thickness,height/1)
 function draw() {
   background(255,255,255);  
   
-  speed=random(223,321)
-  bullet.velocityX=speed;
+
 
  
   if(hasCollied(bullet,wall))
